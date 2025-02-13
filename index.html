@@ -220,24 +220,24 @@
                   <h2 class="text-center mb-4">İletişim</h2>
                   <div class="row">
                     <div class="col-md-6 offset-md-3">
-                      <form name="contact" method="POST" data-netlify="true">
-                        <!-- Netlify Forms için gizli alan -->
-                        <input type="hidden" name="form-name" value="contact">
-                        
-                        <div class="mb-3">
-                          <label for="name" class="form-label">İsim</label>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="İsminiz" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="email" name="email" placeholder="Email adresiniz" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="message" class="form-label">Mesaj</label>
-                          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Mesajınız" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Gönder</button>
-                      </form>
+                        <form name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact">
+                            <!-- Diğer form alanları (İsim, Email, Mesaj) -->
+                            <div class="mb-3">
+                              <label for="name" class="form-label">İsim</label>
+                              <input type="text" class="form-control" id="name" name="name" placeholder="İsminiz" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="Email adresiniz" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="message" class="form-label">Mesaj</label>
+                              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Mesajınız" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Gönder</button>
+                          </form>
+                          
                     </div>
                   </div>
                 </div>
