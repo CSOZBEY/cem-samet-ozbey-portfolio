@@ -1,0 +1,103 @@
+:root {
+    --primary: #ff0055;    /* Canlı kırmızı */
+    --secondary: #00d4ff;  /* Canlı mavi */
+    --dark-bg: #121212;    /* Koyu arka plan */
+    --piano-black: #000;   /* Piano black detay */
+    --text-color: #e0e0e0;  /* Açık gri metin rengi */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Light Theme Overrides */
+  body.light-theme {
+    --primary: #ff0055;
+    --secondary: #00d4ff;
+    --dark-bg: #f8f0e6;
+    --piano-black: #f8f9fa;
+    --text-color: #333333;
+  }
+  
+  /* Navbar Ayarları */
+  .navbar {
+    background: var(--piano-black);
+    transition: background 0.3s ease;
+  }
+  .navbar-brand, .nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover {
+    color: var(--secondary) !important;
+  }
+  
+  /* Header Ayarları */
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    transform: rotate(10deg);
+    animation: shine 5s infinite linear;
+  }
+  @keyframes shine {
+    0% { transform: translateX(-100%) rotate(10deg); }
+    100% { transform: translateX(100%) rotate(10deg); }
+  }
+  header h1 {
+    font-size: 3.5rem;
+    z-index: 1;
+    position: relative;
+  }
+  header p {
+    font-size: 1.2rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Section Ayarları */
+  section {
+    padding: 80px 0;
+  }
+  
+  /* Resume ve İletişim Bölümleri */
+  section#resume, section#contact {
+    background: #1f1f1f;
+    color: #fff; /* Beyaz renk kullanarak metni daha okunur hale getiriyoruz */
+  }
+  
+  
+  /* Portfolio Kartları Hover Efekti */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+  
+  /* Footer Ayarları */
+  footer {
+    background: var(--piano-black);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
