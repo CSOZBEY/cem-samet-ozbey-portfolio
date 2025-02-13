@@ -12,6 +12,25 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     
+    // Aktif navigasyon linklerini güncellemek için basit scroll event'i:
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
+      sections.forEach(section => {
+        const top = section.offsetTop - 80; // navbar yüksekliğine göre ayarlayın
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if(window.pageYOffset >= top && window.pageYOffset < top + height) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+    
     console.log("main.js dosyası yüklendi.");
   });
   
